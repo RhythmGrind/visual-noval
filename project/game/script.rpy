@@ -24,5 +24,6 @@ label start:
 
     "Having been nominated for an academy award the year prior, his new project Time is Running Out, stars Kyle and his co-star, Daniella Tako, who was making her name known overseas in Japan. "
 
-
+    "Hollywood producers and managers hesitated for months to make this project, questioning how many Americans would see an action packed film starring two Asians with a supporting cast of other well known Hollywood actors."
+    
     return
