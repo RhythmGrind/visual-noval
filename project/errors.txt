@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 40: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
+    "Fine, I’ll do it. But only if you’ll be by my side the entire time."
+                                                                         ^
+
+Ren'Py Version: Ren'Py 8.0.1.22070801
+Fri Aug 12 05:04:19 2022
