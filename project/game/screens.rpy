@@ -100,7 +100,7 @@ screen say(who, what):
 
     window:
         id "window"
-
+        
         if who is not None:
 
             window:
@@ -120,14 +120,36 @@ screen say(who, what):
 ## Make the namebox available for styling through the Character object.
 init python:
     config.character_id_prefixes.append('namebox')
+    textbox_alpha = 0.9
 
-style window is default
+init python:
+    def textbox_tranparent(trans, st, at):
+        global textbox_alpha
+        trans.alpha = textbox_alpha
+
+transform textbox_transparent_trans(alpha):
+    alpha alpha
+
+
+#style window is default
+
 style say_label is default
-style say_dialogue is default
+
+
+style say_dialogue:
+    color "#fff"
+
 style say_thought is say_dialogue
 
 style namebox is default
 style namebox_label is say_label
+
+image textbox_bg:
+    "gui/tb2.png"
+    xalign 0.5
+    yalign 0.64
+    function textbox_tranparent
+
 
 
 style window:
@@ -136,21 +158,26 @@ style window:
     yalign gui.textbox_yalign
     ysize gui.textbox_height
 
-    background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
+    #background Image("gui/tb2.png", xalign=0.5, yalign=0.64)
+
+    background "textbox_bg"
+
 
 style namebox:
     xpos gui.name_xpos
     xanchor gui.name_xalign
-    xsize gui.namebox_width
+    xsize 400
     ypos gui.name_ypos
-    ysize gui.namebox_height
+    ysize 400
 
-    background Frame("gui/namebox.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
+    background Frame("gui/nb1.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
     padding gui.namebox_borders.padding
+
+
 
 style say_label:
     properties gui.text_properties("name", accent=True)
-    xalign gui.name_xalign
+    xalign 0.5
     yalign 0.5
 
 style say_dialogue:

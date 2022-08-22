@@ -1,42 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "renpy/common/00start.rpy", line 215, in script call
-    call _load_reload_game from _call__load_reload_game_1
-  File "renpy/common/00keymap.rpy", line 508, in script
-    python hide:
-  File "renpy/common/00keymap.rpy", line 508, in <module>
-    python hide:
-  File "renpy/common/00keymap.rpy", line 518, in _execute_python_hide
-    renpy.load("_reload-2")
-Exception: Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?
+  File "game/script.rpy", line 121, in script
+    K "*Kyle nudges Daniella with his elbow* That’s where we come in. We could change history with this movie…"
+Exception: Sayer 'K' is not defined.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/00start.rpy", line 215, in script call
-    call _load_reload_game from _call__load_reload_game_1
-  File "renpy/common/00keymap.rpy", line 508, in script
-    python hide:
-  File "/Users/zhengz/Desktop/renpy-8.0.1-sdk/renpy/ast.py", line 1131, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "/Users/zhengz/Desktop/renpy-8.0.1-sdk/renpy/python.py", line 1049, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "renpy/common/00keymap.rpy", line 508, in <module>
-    python hide:
-  File "renpy/common/00keymap.rpy", line 518, in _execute_python_hide
-    renpy.load("_reload-2")
-  File "/Users/zhengz/Desktop/renpy-8.0.1-sdk/renpy/loadsave.py", line 769, in load
-    log.unfreeze(roots, label="_after_load")
-  File "/Users/zhengz/Desktop/renpy-8.0.1-sdk/renpy/rollback.py", line 1078, in unfreeze
-    self.rollback(0, force=True, label=label, greedy=greedy, on_load=True)
-  File "/Users/zhengz/Desktop/renpy-8.0.1-sdk/renpy/rollback.py", line 889, in rollback
-    self.load_failed()
-  File "/Users/zhengz/Desktop/renpy-8.0.1-sdk/renpy/rollback.py", line 807, in load_failed
-    raise Exception("Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?")
-Exception: Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?
+  File "game/script.rpy", line 121, in script
+    K "*Kyle nudges Daniella with his elbow* That’s where we come in. We could change history with this movie…"
+  File "C:\Users\z0010\Downloads\renpy-8.0.1-sdk\renpy\ast.py", line 881, in execute
+    who = eval_who(self.who, self.who_fast)
+  File "C:\Users\z0010\Downloads\renpy-8.0.1-sdk\renpy\ast.py", line 774, in eval_who
+    raise Exception("Sayer '%s' is not defined." % who)
+Exception: Sayer 'K' is not defined.
 
-macOS-10.16-x86_64-i386-64bit x86_64
+Windows-10-10.0.19042 AMD64
 Ren'Py 8.0.1.22070801
 project 1.0
-Mon Aug 15 16:31:46 2022
+Tue Aug 16 21:12:39 2022

@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 40: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
-    "Fine, I’ll do it. But only if you’ll be by my side the entire time."
-                                                                         ^
+File "game/gui.rpy", line 108: expected expression
+    define gui.name_xpos = 
+                           ^
 
 Ren'Py Version: Ren'Py 8.0.1.22070801
-Fri Aug 12 05:04:19 2022
+Mon Aug 22 00:39:02 2022
