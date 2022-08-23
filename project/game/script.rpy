@@ -19,6 +19,25 @@ image picture_7 = im.Scale("ozoz.jpg",1920,1080)
 image picture_8 = im.Scale("night.jpg",1920,1080)
 
 image d_mad = "Daniella/madred.png"
+image k_sad = "Kyle/sad.png"
+image j_j = "John/j.png"
+image k_upset = "Kyle/upset.png"
+image j_smile = "John/smile.png"
+image j_natural = "John/natural.png"
+image j_worried= "John/worried.png"
+image j_suprised = "John/supreised.png"
+image k_angry = "Kyle/angry.png"
+image k_laugh = "Kyle/laugh.png"
+image k_shy = "Kyle/shy.png"
+image k_natural= "Kyle/natural.png"
+image k_lilupset = "Kyle/little upset.png"
+
+
+
+
+
+
+
 # The game starts here.
 
 label start:
@@ -51,13 +70,25 @@ label start:
     scene picture_3
     with dissolve
     hide picture_7
+
+    show k_sad
     k "Isabel… Adams? Like, the actress who every man had in their helmet for a pinup over in Vietnam? "
+
+    hide k_sad
+    show j_j
     j "For the 100th time… YES. Look, I know you don’t want to be in a fake relationship but it’s to get people to go see you in the theater. The producers are already talking about firing Daniella for someone else. "
 
+    hide j_j
+    show k_upset
     k "*Visibly upset*"
     
+    hide k_upset
+
+    show j_smile
     j "It’s just for two years. We’ll have photographers catch you two coming from dinner and the world will know of Kyle and Isabel."
     j "If you won’t do it for yourself, do it for Daniella? Better yet, do it… for me?"
+    hide j_smile
+
 
     menu:
         "Fine, I’ll do it. But only if you’ll be by my side the entire time.":

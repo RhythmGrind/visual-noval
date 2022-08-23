@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/gui.rpy", line 108: expected expression
-    define gui.name_xpos = 
-                           ^
+File "game/script.rpy", line 87: expected 'image_name_component' not found.
+    show 
+         ^
 
 Ren'Py Version: Ren'Py 8.0.1.22070801
-Mon Aug 22 00:39:02 2022
+Mon Aug 22 16:22:13 2022
