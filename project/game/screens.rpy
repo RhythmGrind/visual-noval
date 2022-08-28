@@ -120,7 +120,7 @@ screen say(who, what):
 ## Make the namebox available for styling through the Character object.
 init python:
     config.character_id_prefixes.append('namebox')
-    textbox_alpha = 0.9
+    textbox_alpha = 0.8
 
 init python:
     def textbox_tranparent(trans, st, at):
@@ -135,7 +135,6 @@ transform textbox_transparent_trans(alpha):
 
 style say_label is default
 
-
 style say_dialogue:
     color "#fff"
 
@@ -145,7 +144,7 @@ style namebox is default
 style namebox_label is say_label
 
 image textbox_bg:
-    "gui/tb2.png"
+    "gui/textbox3.png"
     xalign 0.5
     yalign 0.64
     function textbox_tranparent

@@ -1,22 +1,36 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 121, in script
-    K "*Kyle nudges Daniella with his elbow* That’s where we come in. We could change history with this movie…"
-Exception: Sayer 'K' is not defined.
+  File "game/script.rpy", line 216, in script
+    with hpunch(1.0)
+  File "game/script.rpy", line 216, in <module>
+    with hpunch(1.0)
+Exception: Not a displayable: 1.0
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 121, in script
-    K "*Kyle nudges Daniella with his elbow* That’s where we come in. We could change history with this movie…"
-  File "C:\Users\z0010\Downloads\renpy-8.0.1-sdk\renpy\ast.py", line 881, in execute
-    who = eval_who(self.who, self.who_fast)
-  File "C:\Users\z0010\Downloads\renpy-8.0.1-sdk\renpy\ast.py", line 774, in eval_who
-    raise Exception("Sayer '%s' is not defined." % who)
-Exception: Sayer 'K' is not defined.
+  File "game/script.rpy", line 216, in script
+    with hpunch(1.0)
+  File "C:\Users\z0010\Downloads\renpy-8.0.1-sdk\renpy\ast.py", line 1651, in execute
+    trans = renpy.python.py_eval(self.expr)
+  File "C:\Users\z0010\Downloads\renpy-8.0.1-sdk\renpy\python.py", line 1080, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\z0010\Downloads\renpy-8.0.1-sdk\renpy\python.py", line 1073, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 216, in <module>
+    with hpunch(1.0)
+  File "C:\Users\z0010\Downloads\renpy-8.0.1-sdk\renpy\display\motion.py", line 300, in Move
+    return Motion(Interpolate(startpos, endpos),
+  File "C:\Users\z0010\Downloads\renpy-8.0.1-sdk\renpy\display\motion.py", line 102, in __init__
+    self.add(child)
+  File "C:\Users\z0010\Downloads\renpy-8.0.1-sdk\renpy\display\layout.py", line 207, in add
+    child = renpy.easy.displayable(d)
+  File "C:\Users\z0010\Downloads\renpy-8.0.1-sdk\renpy\easy.py", line 140, in displayable
+    raise Exception("Not a displayable: %r" % (d,))
+Exception: Not a displayable: 1.0
 
 Windows-10-10.0.19042 AMD64
 Ren'Py 8.0.1.22070801
 project 1.0
-Tue Aug 16 21:12:39 2022
+Sun Aug 28 03:47:31 2022
