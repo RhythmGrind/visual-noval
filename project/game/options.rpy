@@ -12,7 +12,7 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("project")
+define config.name = _("Smile and Wave")
 
 
 ## Determines if the title given above is shown on the main menu screen. Set
@@ -23,7 +23,7 @@ define gui.show_name = True
 
 ## The version of the game.
 
-define config.version = "1.0"
+#define config.version = "1.0"
 
 
 ## Text that is placed on the game's about screen. Place the text between the
@@ -149,7 +149,7 @@ define config.save_directory = "project-1659996928"
 ##
 ## The icon displayed on the taskbar or dock.
 
-define config.window_icon = "gui/window_icon.png"
+define config.window_icon = "gui/icon1.png"
 
 
 ## Build configuration #########################################################

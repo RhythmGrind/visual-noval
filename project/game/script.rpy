@@ -53,9 +53,12 @@ image d_lilsup = im.Scale("Daniella/lilsup.png",900,1080)
 image d_sup = im.Scale("Daniella/sup.png",900,1080)
 
 image k_sup =im.Scale("Kyle/sup.png",900,1080)
+
 image k_n = im.Scale("Kyle/n.png",900,1080)
 image k_angry = im.Scale("Kyle/angry.png",900,1080)
+
 image k_laugh = im.Scale("Kyle/laugh.png",900,1080)
+
 image k_shy = im.Scale("Kyle/shy.png",900,1080)
 image k_natural= im.Scale("Kyle/natural.png",900,1080)
 image k_lilupset = im.Scale("Kyle/little upset.png",900,1080)
@@ -91,8 +94,8 @@ image g_natural= im.Scale("George/natural.png",900,1080)
 image g_cu = im.Scale("George/cu.png",900,1080)
 image g_angry = im.Scale("George/angry.png",900,1080)
 image g_smile = im.Scale("George/smile.png",900,1080)
-image g_sup = im.Scale("George/surprised.png",900,1080)
 
+image g_sup = im.Scale("George/surprised.png",900,1080)
 
 # The game starts here.
 
@@ -104,14 +107,30 @@ label start:
     scene picture_1
  
     "Kung-Fu movies are at its peak. Legend Bruce Lee is changing the movie industry by being a representation for the Asian community. "
-    "Upcoming actor, {b}Kyle Wang{/b}, is also making his mark."
+    show k_happy
+    with dissolve
+    "Upcoming actor, {color=#E0B0FF}{i}{b}Kyle Wang{/b}{/i}{/color=#E0B0FF}, is also making his mark."
+    hide k_happy
     scene picture_2
     with dissolve
     hide picture_1
-
-    "Having been nominated for an academy award the year prior, his new project {i}Time is Running Out{/i}, stars Kyle and his co-star, {b}Daniella Tako{/b}, who was making her name known overseas in Japan. "
+    
+    show d_laugh
+    with dissolve
+    "Having been nominated for an academy award the year prior, his new project {i}Time is Running Out{/i}, stars Kyle and his co-star, {color=#E0B0FF}{i}{b}Daniella Tako{/b}{/i}{/color=#E0B0FF}, who was making her name known overseas in Japan. "
+    hide d_laugh
     "Hollywood producers and managers hesitated for months to make this project, questioning how many Americans would see an action packed film starring two Asians with a supporting cast of other well known Hollywood actors."
-    "As a solution, Kyle’s manager, {b}John{/b}, and producers of {i}Time is Running Out{/i} decide to set Kyle up with the top bachelorette in Hollywood: {b}Isabel Adams{/b}. "
+    
+    show j_smile at left
+    with moveinleft
+    show i_natural at right
+    with moveinright
+    "As a solution, Kyle’s manager, {color=#E0B0FF}{i}{b}John{/color=#E0B0FF}{/i}{/b}, and producers of {i}Time is Running Out{/i} decide to set Kyle up with the top bachelorette in Hollywood: {color=#E0B0FF}{i}{b}Isabel Adams{/color=#E0B0FF}{/i}{/b}. "
+    hide j_smile
+    with moveoutleft
+    hide i_natural
+    with moveoutright
+
     scene picture_7
     with dissolve
     hide picture_2
@@ -134,7 +153,7 @@ label start:
 
     hide j_j
     show k_upset
-    k "*Visibly upset*"
+    k "{color=#D2B9D3}{i}*Visibly upset*"
     
     hide k_upset
     show j_smile
@@ -153,22 +172,22 @@ label start:
     with dissolve
     hide picture_3
 
-
     "AT THE SAME TIME, 20 MILES AWAY"
-    scene picture_6
-    with dissolve
-    hide picture_5
 
+    show picture_6
+    with zoomin
+    hide picture_4
+
+    pause 1.0
     show i_worried
     with hpunch
     i "I have to date WHO?"
-
     hide i_worried
     show g_natural
     g "Kyle Wang. John’s actor. The one who was nominated for best actor last year."
     hide g_natural
     show i_worried
-    i "*Worried tone* You, you don’t think John told Kyle about us right?"
+    i "{color=#D2B9D3}{i}*Worried tone*{/color=#D2B9D3}{/i} You, you don’t think John told Kyle about us right?"
     hide i_worried
     show g_natural
     g "Sweetie, no. No one knows about us except John. And he’s my brother - he would never tell others about us until we’re ready. "
@@ -209,7 +228,7 @@ label start:
     with dissolve
     hide picture_4
 
-
+    pause 1.0
     show k_natural
     k "Ok. Daniella, say it again but add more emotion. Ready? Go!"
     hide k_natural
@@ -218,11 +237,10 @@ label start:
     d "You? You… KILLED MY FATHER!"
     hide d_mad
     show d_cry
-    d "*as a single tear streams down her face*"
+    d "{color=#D2B9D3}{i}*as a single tear streams down her face*"
     d "I trusted you and this… this is how you repay me? I should have listened to Papa when he was alive… men are to never be trusted."
     d "Prepare… prepare to meet your end!"
     hide d_cry
-    
     show k_natural
     k "That was better!"
     hide k_natural
@@ -239,34 +257,34 @@ label start:
     k "Geez Dani, what's got you all riled up"
     hide k_sup
     show d_red
-    d "(How do I tell him it's because he’s going to date THE Isabel Adams…)"
+    d "{color=#D2B9D3}{i}(How do I tell him it's because he’s going to date THE Isabel Adams…)"
     hide d_red
     show d_nomood
     d "Just stressed for the film to do well."
     hide d_nomood
     show d_laugh
-    d "(Good.. good reason, Dani)"
+    d "{color=#D2B9D3}{i}(Good.. good reason, Dani)"
     hide d_laugh
     show d_mad
     d "As I was walking down the street today, a group of white people started pulling their eyes back and laughing at me. I am just so tired of people underestimating me - especially since I’m an actor."
     d "Do they not know how popular I am in Japan? Well, obviously not. BUT the sentiment would be appreciated. I just want to prove to everyone that I belong on the big screens in America; that I worked my ass off to get where I am. "
     hide d_mad
     show d_dontcare
-    d "(Which is all true, I want nothing more than to be accepted here…)"
+    d "{color=#D2B9D3}{i}(Which is all true, I want nothing more than to be accepted here…)"
     hide d_dontcare
     show d_red
-    d "( I just can’t tell Kyle about my feelings toward Isabel, what would people think? I guess not ALL of me will be accepted…)"
+    d "{color=#D2B9D3}{i}(I just can’t tell Kyle about my feelings toward Isabel, what would people think? I guess not ALL of me will be accepted…)"
     hide d_red
-    "*Daniella flops on the couch next to Kyle*"
+    "{color=#D2B9D3}{i}*Daniella flops on the couch next to Kyle*"
     show k_happy
     k "I get it… it's hard out here in LA. People already look at us funny and it’s not like we’ve had too much good representation on the big screen. But, we have to start somewhere"
-    k "*Kyle nudges Daniella with his elbow* That’s where we come in. We could change history with this movie…"
+    k "{color=#D2B9D3}{i}*Kyle nudges Daniella with his elbow*{/color=#D2B9D3}{/i} That’s where we come in. We could change history with this movie…"
     hide k_happy
     show d_normal
     d "Yeah… history…"
     hide d_normal
     show d_smile
-    d "*says sarcastically* Hey Kyle, then remind me why the producers and your own manager are forcing you to date Isabel Adams for TWO YEARS?"
+    d "{color=#D2B9D3}{i}*says sarcastically*{/color=#D2B9D3}{/i} Hey Kyle, then remind me why the producers and your own manager are forcing you to date Isabel Adams for TWO YEARS?"
     hide d_smile
     show k_n
     k "WOAH I said we “COULD change history”... I didn’t say who would HELP us change history"
@@ -278,7 +296,7 @@ label start:
     k "Dani… I hate to say it but let’s just be glad we’re even in this film."
     hide k_n
     show d_dontcare
-    d "*hangs her head in sadness yet understanding*"
+    d "{color=#D2B9D3}{i}*hangs her head in sadness yet understanding*"
     hide d_dontcare
 
     show k_happy
@@ -286,7 +304,7 @@ label start:
     hide k_happy
     show d_smile
     d "I’m a ~gorgeous ~ spy for the Japanese government who is in America to avenge her fathers death."
-    "*Her tone gets more excited as she goes on…*"
+    "{color=#D2B9D3}{i}*Her tone gets more excited as she goes on…*"
     hide d_smile
     show d_laugh
     d "I am stronger than 10 American soldiers combined, all from my exceptional martial arts training I’ve received since I was born."
@@ -303,8 +321,8 @@ label start:
     k "Two Asian leads in a Hollywood movie?? Come on now… it’s groundbreaking"
     hide k_happy
     show k_upset
-    k "(Being Asian American is already hard here in the film industry, how would people react if they knew WHO I was really in love with.. )"
-    k "*Kyle’s big smile quickly turns into one of frustration*"
+    k "{color=#D2B9D3}{i}(Being Asian American is already hard here in the film industry, how would people react if they knew WHO I was really in love with.. )"
+    k "{color=#D2B9D3}{i}*Kyle’s big smile quickly turns into one of frustration*"
     hide k_upset
     show d_smile
     d "Your turn… what’s got YOU all riled up?"
@@ -325,7 +343,7 @@ label start:
     hide d_lilsup
     show k_u
     k "John"
-    "*he stares at Daniella to see her reaction*"
+    "{color=#D2B9D3}{i}*he stares at Daniella to see her reaction*"
     hide k_u
 
     show d_sup
@@ -333,7 +351,7 @@ label start:
     d "John? YOUR MANAGER??"
     hide d_sup
     show k_u
-    k "(Why is the first thing she thought about is that he’s my manager… not that he’s a… man?)"
+    k "{color=#D2B9D3}{i}(Why is the first thing she thought about is that he’s my manager… not that he’s a… man?)"
     k "Yes, my manager"
     hide k_u
     show d_sup
@@ -347,10 +365,10 @@ label start:
     hide d_normal
     show k_laugh
     k "Really? Why? Do YOU want to date her?"
-    k "*Kyle lets out a loud laugh*"
+    k "{color=#D2B9D3}{i}*Kyle lets out a loud laugh*"
     hide k_laugh
     show d_red
-    d "*purses her lips and furrows her brows as she does not break eye contact with Kyle*"
+    d "{color=#D2B9D3}{i}*purses her lips and furrows her brows as she does not break eye contact with Kyle*"
     hide d_red
     show k_sup
     with hpunch
@@ -369,8 +387,11 @@ label start:
     with dissolve
     hide picture_5
 
+    pause 1.0
     show k_angry
+    with None
     show picture_9
+    with dissolve
     k "One day, I’m getting my own star"
     hide k_angry
     hide picture_9
@@ -379,13 +400,13 @@ label start:
     j "KYLE WANG. With a little film camera under your name."
     hide j_smile
     show k_lilupset
-    k "*looks at John* MY name… among the stars"
-    k "(But you’re the only star I want in my life… god that was way too cheesy)"
+    k "{color=#D2B9D3}{i}*looks at John*{/color=#D2B9D3}{/i} MY name… among the stars"
+    k "{color=#D2B9D3}{i}(But you’re the only star I want in my life… god that was way too cheesy)"
     k "Yeah, but I can only get there with YOUR help"
     hide k_lilupset
     show j_worried
     j "Listen, you could make it so far.. even without me."
-    j "(But I hope I’m by your side the entire time…)"
+    j "{color=#D2B9D3}{i}(But I hope I’m by your side the entire time…)"
     j "You look bothered, is everything okay?"
     hide j_worried
 
@@ -395,7 +416,7 @@ label start:
         "{color=#2E8B57}Nevermind":
             call k6
     show k_shy
-    k "(*thinks in a mocking voice* Heyyy! Want to get a romantic dinner with me while the whole world judges how I’m in love with a man?)"
+    k "{color=#D2B9D3}{i}(*thinks in a mocking voice* Heyyy! Want to get a romantic dinner with me while the whole world judges how I’m in love with a man?)"
     k "Umm, Do you want to get dinner? Tonight? Or or or whenever you’re free haha."
     hide k_shy
     show j_normal
@@ -408,9 +429,9 @@ label start:
     j "Okay, now I know something is definitely up. You never forget when we have plans. You can tell me anything, you know that right?"
     hide j_normal
     show k_shy
-    k "(Just tell him. Come on. It shouldn't be that hard. You see the way he looks at you, Dani thinks he likes you back)"
-    k "(Ok. It’s time, I’m going to tell him I have the biggest crush on him. Alright, deep breath)"
-    k "(One…two… three)"
+    k "{color=#D2B9D3}{i}(Just tell him. Come on. It shouldn't be that hard. You see the way he looks at you, Dani thinks he likes you back)"
+    k "{color=#D2B9D3}{i}(Ok. It’s time, I’m going to tell him I have the biggest crush on him. Alright, deep breath)"
+    k "{color=#D2B9D3}{i}(One…two… three)"
     hide k_shy
     show k_say
     with hpunch
@@ -433,14 +454,14 @@ label start:
     k "What is your problem??"
     hide k_angry
     show k_sup
-    k "(Oh crap- it’s Isabel Adams)"
+    k "{color=#D2B9D3}{i}(Oh crap- it’s Isabel Adams)"
     hide k_sup
     show g_angry
     with hpunch
     g "Hey man don’t talk to her like that! It was an accident!"
     hide g_angry
     show j_q
-    j "Hey guys, the paparazzi is getting this all on camera. Mind if we all go somewhere a little more private than the Hollywood walk of fame??"
+    j "Hey guys, the paparazzi is getting this all on camera. Mind if we all go somewhere a little more private than the Hollywood Walk of Fame??"
     hide j_q
     show i_natural
     i "Good call, let’s go"
@@ -452,7 +473,7 @@ label start:
     scene hallway
     with dissolve
     hide picture_10
-
+    pause 1.0
     show j_smile
     j "Uh, a little earlier than we anticipated and not the ideal method but uh, Kyle Wang, meet Isabel Adams. Isabel Adams, Kyle Wang."
     hide j_smile
@@ -460,14 +481,16 @@ label start:
     k "She spilled soda on my new shirt."
     hide k_angry
     show j_q
-    j "*Whispers into his ear* Will you stop acting like a child and get along?"
+    j "{color=#D2B9D3}{i}*Whispers into his ear*{/color=#D2B9D3}{/i} Will you stop acting like a child and get along?"
     hide j_q
     show k_angry
     k "I have a reputation to uphold and how do you think it looks when someone makes a fool of me in public??"
     hide k_angry
-    show j_q
+
+    show g_angry
     g "How do you think I feel? Isabel and I weren’t even supposed to be seen out together. This time tomorrow our photos will be all over the tabloids!"
-    hide j_q
+    hide g_angry
+
     show k_grouch
     k "And who are you again?"
     hide k_grouch
@@ -494,7 +517,7 @@ label start:
     hide j_normal
     show i_smile
     i "ANYWAYS… Kyle! It is finally nice to meet you"
-    "*shakes his hand hesitantly*"
+    "{color=#D2B9D3}{i}*shakes his hand hesitantly*"
     i "Sorry about the whole, soda situation"
     hide i_smile
     show k_grouch
@@ -533,7 +556,7 @@ label start:
     hide i_worried
     show k_n
     k "Mhm"
-    k "(Totally not suspicious)"
+    k "{color=#D2B9D3}{i}(Totally not suspicious){/i}"
     hide k_n
     show k_sup
     k "Anyways, I have to go meet my co-star, we’re going to go run some lines before we start training tomorrow"
@@ -554,15 +577,15 @@ label start:
     hide k_natural
     hide mic
     "*Back in the hallway, George, Isabel, and John are still discussing*"
-
-    i "*slaps George’s arm*"
     show i_angry
+    i "{color=#D2B9D3}{i}*slaps George’s arm*"
     with hpunch
     i "COME ON!"
     hide i_angry
-
-    g "WHAT DID I DO???"
+    show g_angry
     with hpunch
+    g "WHAT DID I DO???"
+    hide g_angry
     show i_angry
     i "What DIDN’T you do?"
     i "You buy me the drink, you decide to take a stroll on the Hollywood Walk of Fame, then proceed to nudge me hard enough where I spill the drink onto Kyle Wang, and almost tell him how we’re dating! What in the world are you on today???"
@@ -573,13 +596,18 @@ label start:
     j "I think I’m going to step out"
     hide j_awkward
 
-    "DO NOT MOVE"
+
+    show i_angry at left
+    show g_angry at right
     with hpunch
+    "DO NOT MOVE"
+    hide i_angry
+    hide g_angry
     show g_natural
     g "Isa, take a deep breath, my love. It was just a bad day."
     hide g_natural
     show i_ren
-    i "*Closes her eyes, takes three deep breaths*"
+    i "{color=#D2B9D3}{i}*Closes her eyes, takes three deep breaths*"
     i "You’re right, you’re right. Everything’s okay"
     hide i_ren
     show j_relieved
@@ -596,7 +624,7 @@ label start:
     j "So yes, my immediate reaction is to “fix it”… I… care about him… a lot."
     hide j_sad
     show i_worried
-    i "(Why did he say “I care about him, a lot” like that. There’s something he’s not telling us…)"
+    i "{color=#D2B9D3}{i}(Why did he say “I care about him, a lot” like that. There’s something he’s not telling us…)"
     hide i_worried
     show g_nothing
     g "Alright, I see where you’re coming from. Just, please, make sure this is all okay?"
@@ -604,11 +632,17 @@ label start:
     show j_natural
     j "I always do…"
     hide j_natural
+    show j_smile
+    j "Just remember, smile and wave. Smile and wave."
+    hide j_smile
 
     "*ISA LEAVES THE HALLWAY FIRST, AVOIDING ANY FURTHER SUSPICION*"
 
     "*JOHN AND GEORGE FOLLOW OUT A FEW MINUTES LATER*"
-
+    
+    show black
+    centered "{size=+10}{color=#fff}THANKS FOR PLAYING"
+   
     return
 
 
@@ -623,9 +657,9 @@ label k1:
     k "AH! Thanks! Um, you’re the, uh,  best manager. Truly, Thank you. Thank you."
     hide k_grouch 
     show j_awkward
-    j "*Voice starts to get nervous*"
+    j "{color=#D2B9D3}{i}*Voice starts to get nervous*"
     j "Yeah! Uh, of course. You pay me to do my job haha…ha. Okay! Well, I’ll catch you on the flip side"
-    j "*awkward finger guns to Kyle*"
+    j "{color=#D2B9D3}{i}*awkward finger guns to Kyle*"
     hide j_awkward
     return
 label k2:
